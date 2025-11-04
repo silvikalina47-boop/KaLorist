@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KaLorist (Kalina’s Florist)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* 🌸 Background bunga pastel (bukan daun atau kopi) */
+    body {
+      background-image: url('peony.jpg');
+      /* Gambar ini berisi bunga tulip pastel lembut */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Poppins', sans-serif;
+      color: #5c4b3c;
+      position: relative;
+    }
+
+    /* Lapisan lembut agar teks tetap terbaca */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 250, 240, 0.9);
+      z-index: -1;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(255, 245, 230, 0.92);
+      backdrop-filter: blur(6px);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #6b4e2e !important;
+      font-size: 1.6rem;
+    }
+
+    .nav-link {
+      color: #6b4e2e !important;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 140px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.3rem;
+      font-weight: 700;
+      color: #5c4b3c;
+      text-shadow: 0 2px 4px rgba(255,255,255,0.9);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #6b4e2e;
+      margin-top: 15px;
+    }
+
+    .btn-custom {
+      background-color: #c8a97e;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: #b68d64;
+    }
+
+    /* Sections */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-weight: 700;
+      color: #6b4e2e;
+    }
+
+    .card {
+      border: none;
+      background-color: rgba(255, 253, 249, 0.95);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-radius: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: rgba(255, 245, 230, 0.95);
+      color: #6b4e2e;
+      padding: 40px 0;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .form-control {
+      background-color: #fffefb;
+      border: 1px solid #e2d5c4;
+    }
+
+    .form-control:focus {
+      border-color: #c8a97e;
+      box-shadow: 0 0 5px rgba(200, 169, 126, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">KaLorist <small class="text-muted" style="font-size:0.9rem;">(Kalina’s Florist)</small></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Address">Alamat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>KaLorist (Kalina’s Florist)</h1>
+      <p>Keindahan berbagai bunga lembut untuk setiap momen spesial Anda 🌷</p>
+      <a href="#services" class="btn btn-custom mt-3">Jelajahi Layanan</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Tentang Kami</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="florist.jpeg" class="img-fluid rounded-4 shadow" alt="Bunga">
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <p><strong>KaLorist</strong> adalah florist profesional yang menghadirkan keindahan bunga segar ke setiap kesempatan Anda. Berdiri sejak 2010, kami telah melayani ratusan pelanggan dengan rangkaian bunga tulip, mawar, dan lily yang elegan.</p>
+          <p>Kami percaya setiap bunga memiliki makna — dan KaLorist ada untuk membantu Anda menyampaikannya dengan cara yang paling indah.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Layanan Kami</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4 text-center h-100">
+            <img src="bouquet roses.webp" class="img-fluid rounded-3 mb-3" alt="Bouquet">
+            <h5>Bouquet Premium</h5>
+            <p>Rangkaian bunga segar rose dengan sentuhan elegan untuk hadiah dan perayaan.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 text-center h-100">
+            <img src="standing flower in the mirror.jpg" class="img-fluid rounded-3 mb-3" alt="Dekorasi">
+            <h5>Dekorasi Acara</h5>
+            <p>Buat suasana mewah dengan dekorasi bunga segar dari tim profesional KaLorist.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 text-center h-100">
+            <img src="delivery.jpg" class="img-fluid rounded-3 mb-3" alt="Delivery">
+            <h5>Pengiriman Bunga</h5>
+            <p>Layanan pengiriman cepat dan aman — bunga segar langsung ke tangan penerima.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Galeri Bunga</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><img src="bouquet lily.webp" class="img-fluid rounded-4" alt="Tulip pastel"></div>
+        <div class="col-md-4"><img src="bouquet peonys.jpg" class="img-fluid rounded-4" alt="Bouquet"></div>
+        <div class="col-md-4"><img src="bouquet tulip.webp" class="img-fluid rounded-4" alt="Arrangements"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Address" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Alamat Toko</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="toko bunga.jpeg" class="img-fluid rounded-4 shadow" alt="Bunga">
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <p><strong>KaLorist</strong> Alamat toko KaLorist' berada di Jl.Elang no 1492</p>
+          <p>Jangan lupa untuk mampir ke toko KaLorist' ^^</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Hubungi Kami</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Nama</label>
+              <input type="text" class="form-control" placeholder="Nama Anda">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Alamat Email">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Pesan</label>
+              <textarea class="form-control" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 KaLorist (Kalina’s Florist). Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
